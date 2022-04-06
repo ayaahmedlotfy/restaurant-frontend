@@ -1,0 +1,53 @@
+<section id="myhome">
+
+  <div class="text-center">
+    <h2 class=" title text-center mb-5"><span>Pick Click Restaurant</span></h2><br>
+    <h3 class="text-center text-white mb-5">.. Taste The Difference ..</h3><br>
+    <button class="btn" [routerLink]="['/product/listing']">Menu</button>
+    <button class="btn" [routerLink]="['/login']" *ngIf="!loggedIn">Login</button>
+  </div>
+
+</section>
+
+<section id="why-us" class="why-us mb-5" >
+  <div class="container">
+
+    <div class="me-4">
+      <h2>Why choose Our Restaurant</h2>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="box">
+          <span>1</span>
+          <h4>High-Quality Food</h4>
+          <p>we set a high standard for our food quality and ensures that guests receive the same quality with every meal.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="box">
+          <span>2</span>
+          <h4>Free & fast food delivery</h4>
+          <p>We will reach you wherever you are as fast as we can.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="box">
+          <span>3</span>
+          <h4>Open 7 days a week</h4>
+          <p>Our restaurant is open 7 days a week!!</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+</section><!-- End Whu Us Section -->
+
+<button class="btn text-black d-flex mx-auto mb-5" [routerLink]="['/product/listing']">Order Now</button>

@@ -1,0 +1,23 @@
+<div class="mt-5 mb-5">
+<button class="btn text-black mt-5" [routerLink]="['/dashboard']"><i class="fas fa-arrow-left"></i> Home </button>
+</div>
+<div class="container text-center mb-5">
+<table id="customers" class="mb-5">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Message</th>
+
+  </tr>
+  <tr *ngFor="let item of feedbacks">
+    <td>{{item.name}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.phone}}</td>
+    <td>{{item.message}}</td>
+  </tr>
+  
+</table>
+</div>
+
+

@@ -1,0 +1,107 @@
+<div class="cart_section">
+  <div class="container-fluid">
+    <button class="btn text-black mb-5" [routerLink]="['/dashboard']"><i class="fas fa-arrow-left"></i> Home</button>
+      <div class="row ">
+          <div class="col-lg-5">
+            <table class="margin"><tr>
+              <th>
+              <div class="cart_item_quantity cart_info_col ms-5 text-center">
+                <div class="cart_item_title">Image</div>
+              </div>
+              </th>
+              <th>
+              <div class="cart_item_quantity cart_info_col ms-5 text-center">
+              <div class="cart_item_title">Name</div>
+            </div>
+            </th>
+            <th>
+              <div class="cart_item_quantity cart_info_col ms-5 text-center">
+              <div class="cart_item_title">Quantity</div>
+            </div>
+            </th>
+            <th>
+              <div class="cart_item_quantity cart_info_col ms-5 text-center">
+              <div class="cart_item_title">Price</div>
+            </div>
+            </th>
+
+            </tr>
+
+            <tr *ngFor="let item of food" >
+               <td class="ms-5 text-center">
+                <div class="cart_item_image "><img src={{item.imagepath}} alt="food image" ></div>
+
+              </td>
+              <td  class="ms-5 text-center">
+                {{item.name}}
+              </td>
+              <td class="ms-5 text-center">
+                {{item.cartCounter}}
+              </td>
+              <td class="ms-5 text-center">
+                {{item.price}}
+              </td>
+            </tr>
+              </table>
+            </div>
+            <div class="col-lg-4">
+              <table class="margin-r">
+                <tr>
+                 <th><div class="cart_item_name cart_info_col ms-5 text-center">
+                  <div class="cart_item_title">Created at</div>
+                </div></th>
+                <th><div class="cart_item_name cart_info_col ms-5 text-center">
+                  <div class="cart_item_title">Status</div>
+                </div></th>
+                <th><div class="cart_item_name cart_info_col ms-5 text-center">
+                  <div class="cart_item_title">UserName</div>
+                </div></th>
+              </tr>
+            <tr *ngFor="let ordr of order"  >
+
+            <td  class="ms-5 space text-center">
+              {{ordr.created_at}}
+            </td>
+            <td class="ms-5 space text-center">
+              {{ordr.PaymentStatus.status}}
+            </td>
+            <td class="ms-5 space text-center">
+              {{ordr.User.User_Name}}
+            </td>
+              </tr>
+              </table>
+            </div>
+            <div class="col-lg-1">
+              <table class="margin-rr">
+                <tr>
+                <th><div class="cart_item_name cart_info_col ms-5 text-center">
+                  <div class="cart_item_title">UserPhone</div>
+                </div></th>
+
+              </tr>
+            <tr *ngFor="let phone of phones"  >
+            <td class="ms-5 space2 text-center">
+              {{phone}}
+            </td>
+              </tr>
+              </table>
+            </div>
+            <div class="col-lg-1">
+              <table class="margin-rr">
+                <tr>
+                <th><div class="cart_item_name cart_info_col ms-5 text-center">
+                  <div class="cart_item_title">UserAddress</div>
+                </div></th>
+              </tr>
+            <tr *ngFor="let address of addresses"  >
+            <td class="ms-5 space2 text-center">
+              {{address}}
+            </td>
+              </tr>
+              </table>
+            </div>
+
+            </div>
+
+            </div>
+            </div>
